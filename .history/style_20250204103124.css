@@ -1,0 +1,407 @@
+/* General Body Style (for all pages) */
+body {
+    font-family: 'Poppins', Arial, sans-serif; 
+    background: url('img/image.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out; 
+    
+}
+
+/* Fade-in animation for the body */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Styling for All Pages */
+/* Updated Header Styling for Button Layout */
+header {
+    background: rgba(76, 175, 80, 0.9);
+    color: #fff;
+    padding: 1rem 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.backtobooks-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #4CAF50;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.backtobooks-button:hover {
+    background: white;
+    color: #4CAF50;
+}
+.backtoadmin-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #4CAF50;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.backtoadmin-button:hover {
+    background: white;
+    color: #4CAF50;
+}
+
+.header-content {
+    display: flex;
+    justify-content: ;
+    align-items: center;
+    width: 100%;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.right-buttons {
+    margin-left: auto;
+}
+
+.logout-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.add-books-button, 
+.borrow-button, 
+.log-button, 
+.borrowbook-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #4CAF50;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover, 
+.add-books-button:hover, 
+.borrow-button:hover, 
+.log-button:hover, 
+.borrowbook-button:hover {
+    background: white;
+    color: #4CAF50;
+}
+header .backtobooks-button:hover {
+    background: white;
+    color: #4CAF50;
+}
+header .backtoadmin-button:hover {
+    background: white;
+    color: #4CAF50;
+}
+
+
+
+
+/* Form Container Styling for Login and Register */
+.form-container {
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    max-width: 400px;
+    width: 90%;
+    margin: 5rem auto;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for better effect */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Input and Button Styling for Forms */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #45a049;
+    box-shadow: 0 2px 10px rgba(76, 175, 80, 0.4);
+    transform: scale(1.05);
+}
+
+/* Ensure that form elements are centered */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Add spacing between form elements */
+}
+
+/* Heading Styling for Login, Register, Edit */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Admin Page Styling */
+#admin-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 80vh; /* Ensures the content stays centered vertically */
+    margin: 0 auto;
+}
+
+#admin-page table {
+    width: 60%; /* Slightly narrower to ensure spaciousness */
+    max-width: 200px; /* Limit maximum width */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden; /* Clip any overflow for smooth rounded corners */
+    animation: zoomIn 0.8s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#admin-page th,
+#admin-page td {
+    padding: 20px; /* Increased padding for better readability */
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px; /* Consistent font size */
+}
+
+#admin-page th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#admin-page tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#admin-page tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.01);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Adjust the header and footer styles within the admin page */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #4CAF50;
+    color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #admin-page table {
+        width: 95%;
+    }
+
+    #admin-page th,
+    #admin-page td {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+
+
+
+
+
+/* Books Page Table Styling */
+#books-page table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95); /* Solid white background for books table */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#books-page table:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#books-page th, #books-page td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#books-page th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Form Styling */
+form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+form input, form button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* Logs Table Styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #e6e6e6; /* Solid light gray background */
+}
+
+table tr:nth-child(odd) {
+    background-color: white; /* Solid white background for odd rows */
+}
+
+table tr:hover {
+    background-color: #d1d1d1; /* Slightly darker gray for hover */
+}
+
+/* Close Button Styling */
+.close-button {
+    background-color: #f44336; /* Red background */
+    color: white;
+    padding: 10px 15px; /* Adjusted padding for a balanced look */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px; /* Adds spacing if placed next to other buttons */
+    display: inline-block; /* Ensures consistent alignment */
+}
+
+.close-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(229, 57, 53, 0.4); /* Adds a subtle shadow */
+}
+
+.close-button:active {
+    transform: scale(0.95); /* Pressed effect */
+    background-color: #d32f2f; /* Slightly darker red for active state */
+}
+
